@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #46AA64;
+    --primaireColor: #D4E9DB;
+    --secundaireColor: #0A3250;
+    --tertiaireColor: #fff;
+    --quartaireColor: #DFE4E5
+}
+
+header {
+    background-color: var(--mainColor);
+    color: var(--tertiaireColor);
+    --headerPadding: 2em;
+    padding: var(--headerPadding);
+}
+
+h1, p {
+    --mainFont: Arial, Helvetica, sans-serif;
+    font-family: var(--mainFont);
+    display: flex;
+    justify-content: center;
+}
+
+/* begin kaartjes section */
+
+.cards {
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+    --cardGap: 3vw;
+    gap: var(--cardGap);
+}
+
+.maincardshadow, .maincard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primaireColor);
+    color: var(--secundaireColor);
+    --cardWidth: 25vw; /* als ik deze property gebruik in een andere div of iets dergelijks, werkt deze property dan nog ? */
+    /* nee het werkt niet in een andere div */
+    width: var(--cardWidth);
+    --cardHeight: 65vh;
+    height: var(--cardHeight);
+}
+
+.maincardshadow {
+    --schaduw: 0px;
+    box-shadow: 0 0 var(--schaduw) 0 black;
+}
+
+.maincardshadow:hover {
+    --schaduw: 20px;
+    --transitiontime: 200ms;
+    transition-duration: var(--transitiontime);
+}
+
+/* ik heb hier de "--spread" aangepast wanneer je over het kaartje hovered, terwijl ik de box-shadow alleen op de originele plek heb laten staan */
+
+/* einde kaartjes section */
